@@ -1,0 +1,16 @@
+<div class="title">
+
+ <h1>Pokedex</h1>
+</div>
+<div class="poke-container" id="poke-container">
+ <div class="pokemon" *ngFor="let pokemon of pokedex">
+  <div class="img-container">
+   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{pokemon.id}}.png" alt="">
+  </div>
+  <div class="info">
+   <span class="number">#{{pokemon.id}}</span>
+   <h3 class="name">{{pokemon.name}}</h3>
+   <p class="type"  *ngFor="let type of pokemon.types">Type: <span>{{type.type.name}}</span> </p>
+  </div>
+ </div>
+</div>

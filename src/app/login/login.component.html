@@ -1,0 +1,36 @@
+<div *ngIf="!login" class="d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgb(235, 93, 93), rgb(146, 112, 98)); backdrop-filter:blur(10px); width: 100vw; margin: 0; height: 100vh;">
+ <div class="row" >
+  <div class="col"></div>
+  <div class="col align-items-center d-flex">
+   <form>
+    <div class="card" style="width: 38rem; background-color: rgba(255, 255, 255, 0.44); border-style: none;">
+     <div class="card-body">
+      <div class="card-text">
+      <div class="mb-3" style="color: white;">
+       <label for="txtCorreo" class="form-label">Nombre de Usuario</label>
+       <input type="text" class="form-control" name="txtUsuario" [(ngModel)]="usuario" placeholder="Usuario">
+      </div>
+      <div class="mb-3" style="color:white;">
+       <label for="txtContraseña" class="form-label">Contraseña</label>
+       <input type="password" class="form-control" name="txtContraseña" [(ngModel)]="contrasenia" placeholder="Password">
+      </div>
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+       <button class="btn btn-primary" type="submit"
+        style="background-color:rgb(187, 130, 130); border-style: none;" (click)="submit()">Ir</button>
+      </div>
+      <div *ngIf="message.show" class="m-3 bg-{{message.type}} rounded text-light pt-3 pl-3 d-flex align-items-center text-center">
+       <p class="">{{message.message}}</p>
+      </div>
+      </div>
+     </div>
+    </div>
+   </form>
+  </div>
+  <div class="col"></div>
+ </div>
+</div>
+ <!-- Pokedex -->
+ <div *ngIf="login" class="d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgb(235, 93, 93), rgb(146, 112, 98)); backdrop-filter:blur(10px); width: 100vw; margin: 0; height: 100%;">
+  <app-pokedex></app-pokedex>
+ </div>
