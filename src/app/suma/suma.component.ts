@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SumaComponent implements OnInit {
   suma: number = 0;
-
-  constructor() { }
+  show: boolean = false;
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
     this.suma = 5 + 10

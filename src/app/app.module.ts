@@ -8,8 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PokedexComponent } from './pokedex/pokedex.component';
-import { MessageComponent } from './message/message.component';
-import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +15,6 @@ import { ErrorComponent } from './error/error.component';
     SumaComponent,
     LoginComponent,
     PokedexComponent,
-    MessageComponent,
-    ErrorComponent
   ],
   imports: [
     BrowserModule,
